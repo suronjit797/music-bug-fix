@@ -81,5 +81,6 @@ const showAlbum = ({ album }) => {
 
 
 function changeDir(params) {
-  location.pathname = '/'
+  location.pathname = '/music-bug-fix'
+
 }
