@@ -6,7 +6,6 @@ const defaultPic = "https://www.salisburyut.com/wp-content/uploads/2020/09/avata
 const keyword = elementById("keyword");
 const handleSearch = () => {
   if (keyword.value) {
-
     const url = `https://theaudiodb.com/api/v1/json/2/search.php?s=${keyword.value}`;
     fetch(url)
       .then((res) => res.json())
@@ -17,6 +16,7 @@ const handleSearch = () => {
 
 const showArtists = (data) => {
   keyword.value = ''
+  elementById("albums").textContent = ''
   const artistContainer = elementById("artists");
   if (data.artists === null) {
     artistContainer.innerHTML = `<h1 style="color: red;"> No data found </h1>`
